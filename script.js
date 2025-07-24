@@ -17,7 +17,7 @@ form.addEventListener('submit', function (e) {
       goFullScreen();
       hideChat();
       flashBlackWhite();
-    }, 10000); // 10-second delay
+    }, 20000); // 20-second delay
   }, 500);
 });
 
