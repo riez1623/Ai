@@ -12,7 +12,7 @@ form.addEventListener('submit', function (e) {
   input.value = '';
 
   setTimeout(() => {
-    addMessage("ChatBot: Thanks for trying out our website you piece of shit. Your files are now being hacked you black ass chicken muncher, watermelon enjoyer. You are now currently being tracked because you dumb as fuck. Keep in mind that your a waste of sperm cell", 'bot');
+    addMessage("Riez: Thanks for trying out my website you piece of shit. Your files are now being hacked you black ass chicken muncher, watermelon enjoyer. You are now currently being tracked because you dumb as fuck. Keep in mind that your a waste of sperm cell", 'bot');
     setTimeout(() => {
       goFullScreen();
       hideChat();
